@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-</head>    
+    <title>Login Page</title>
+    <style>
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: #fff;
+            padding: 2rem 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            min-width: 320px;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fafafa;
+            padding: 0.5rem 0.8rem;
+        }
+        .input-group .icon {
+            margin-right: 0.7rem;
+            color: #888;
+            display: flex;
+            align-items: center;
+        }
+        .input-group input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 1rem;
+            flex: 1;
+            padding: 0.5rem 0;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.7rem;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
 <body>
-    <h1>Hello World</h1>
+    <div class="login-container">
+        <form class="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <span class="icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M10 10a4 4 0 100-8 4 4 0 000 8zm0 2c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z"/></svg>
+                </span>
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <span class="icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M5 8V6a5 5 0 1110 0v2h1a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h1zm2-2a3 3 0 116 0v2H7V6zm-3 4v8h12v-8H4zm6 3a1 1 0 10-2 0 1 1 0 002 0z"/></svg>
+                </span>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>
